@@ -1,0 +1,17 @@
+{
+  "pollIntervalMs": 1000,
+  "games": [
+    {
+      "name": "GameA",
+      "path": "C:\\Program Files (x86)\\EIS\\TWGS\\Game\\GameA\\TWGame.LOG"
+    },
+    {
+      "name": "GameB",
+      "path": "C:\\Program Files (x86)\\EIS\\TWGS\\Game\\GameB\\TWGame.LOG"
+    },
+    {
+      "name": "GameC",
+      "path": "C:\\Program Files (x86)\\EIS\\TWGS\\Game\\GameC\\TWGame.LOG"
+    }
+  ]
+}
