@@ -157,7 +157,7 @@ class LogWatcher {
 
   async sendLines(channel, lines) {
     for (const line of lines) {
-      const trimmed = line.trim();
+      const trimmed = line.trim().replace(/^\d{1,2}:\d{2}:\d{2} [AP]M \d{2}\/\d{2}\/\d{4}( [0-9A-Fa-f]{8})?\s*/, '');
       if (!trimmed) {
         continue;
       }
