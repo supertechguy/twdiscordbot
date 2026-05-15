@@ -162,7 +162,8 @@ class LogWatcher {
         continue;
       }
 
-      const wrap = (msg) => `\`\`\`ansi\n[33m[${this.name}][0m [31m${msg}[0m\n\`\`\``;
+      const e = String.fromCharCode(27);
+      const wrap = (msg) => `\`\`\`ansi\n${e}[33m[${this.name}]${e}[0m ${e}[31m${msg}${e}[0m\n\`\`\``;
       const content = wrap(trimmed);
       await channel.send(content.length > 2000 ? wrap(trimmed.slice(0, 2000 - wrap('').length - 3) + '...') : content);
     }
