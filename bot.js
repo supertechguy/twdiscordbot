@@ -162,8 +162,9 @@ class LogWatcher {
         continue;
       }
 
-      const content = `**[${this.name}]** ${trimmed}`;
-      await channel.send(content.length > 2000 ? `**[${this.name}]** ${trimmed.slice(0, 1990)}...` : content);
+      const wrap = (msg) => `\`\`\`ansi\n[33m[${this.name}][0m [31m${msg}[0m\n\`\`\``;
+      const content = wrap(trimmed);
+      await channel.send(content.length > 2000 ? wrap(trimmed.slice(0, 2000 - wrap('').length - 3) + '...') : content);
     }
   }
 }
